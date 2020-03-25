@@ -2,7 +2,7 @@ public class Produs {
     private String nume_produs;
     private double pret;
 	private int valabilitate_zile;
-	private Stoc stoc_produs;
+	protected Stoc stoc_produs;
 	
      public Produs(String n, double p, int v, int d)
 	{
@@ -15,15 +15,13 @@ public class Produs {
     public void AdaugareProdus(int nr_adaugari)
    	{
    		stoc_produs.Adaugare(nr_adaugari);
-   		System.out.println("Stocul produsului este:"); 
-   		stoc_produs.Get_produs();
+   		System.out.println("Stocul produsului este:" + stoc_produs.Get_nr_produse()); 
    	}
     
     public void StergereProdus(int nr_stergeri)
     {
     	stoc_produs.Stergere(nr_stergeri);
-    	System.out.println("Stocul produsului este:"); 
-   		stoc_produs.Get_produs();
+    	System.out.println("Stocul produsului este:" + stoc_produs.Get_nr_produse());
     }
     
     String Get_nume()

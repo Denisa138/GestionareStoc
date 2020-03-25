@@ -6,10 +6,10 @@ public class Stoc {
     	this.nr_produse = produse;
     }
     
-    public void Get_produs()
-	{
-    	System.out.print(nr_produse);
-	}
+    public int Get_nr_produse()
+    {
+    	return nr_produse;
+    }
     
     public void Adaugare(int nr_adaugari)
     {

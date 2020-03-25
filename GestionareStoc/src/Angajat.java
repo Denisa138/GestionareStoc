@@ -26,7 +26,7 @@ public class Angajat extends Produs {
     
     public void Stergere_produs(int nr_stergeri, int accesibilitate)
    	{
-    	if(accesibilitate == 1)
+    	if(accesibilitate == 1 && nr_stergeri < stoc_produs.Get_nr_produse())
     	{
    		    StergereProdus(nr_stergeri);
     	}
@@ -75,7 +75,7 @@ public class Angajat extends Produs {
     
     public void Vanzare(int nr_vanzari, int accesibilitate)
     {
-    	if(accesibilitate == 0)
+    	if(accesibilitate == 0 && nr_vanzari < stoc_produs.Get_nr_produse())
     	{
     	   StergereProdus(nr_vanzari);
     	   Bon_fiscal(nr_vanzari);
